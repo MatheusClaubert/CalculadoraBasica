@@ -1,0 +1,92 @@
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.calculadora {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 90%;
+  box-sizing: border-box;
+  animation: aparecer 1s ease-out;
+}
+
+.display {
+  width: 100%;
+  padding: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 50%;
+  background-color: #505050;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn.zero {
+  grid-column: span 2;
+  border-radius: 50px;
+}
+
+.btn.func {
+  background-color: #d4d4d2;
+  color: #000;
+}
+
+.btn.operacao {
+  background-color: #ff9500;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #737373;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.operacao:hover {
+  background-color: #cc7a00;
+}
+
+.btn.func:hover {
+  background-color: #c2c2c2;
+}
